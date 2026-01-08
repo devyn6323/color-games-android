@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rootLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:orientation="vertical"
+    android:padding="24dp">
+    
+    <TextView
+        android:id="@+id/colorText"
+        android:text="Tap a color"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="24dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    
+    <GridLayout
+        android:id="@+id/colorGrid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:columnCount="2"
+        android:rowCount="2"
+        android:useDefaultMargins="true">
+
+    <Button
+        android:text="Red"
+        android:
+        android:id="@+id/redBtn"
+        android:layout_width="0dp"
+        android:layout_height="120dp"
+        android:layout_columnWeight="1"
+        android:backgroundTint="@android:color/holo_red_dark"/>
+
+    <Button
+        android:text="Blue"
+        android:id="@+id/blueBtn"
+        android:layout_height="120dp"
+        android:layout_width="0dp"
+        android:layout_columnWeight="1"
+        android:backgroundTint="@android:color/holo_blue_dark"/>
+
+    <Button
+        android:text="Green"
+        android:id="@+id/greenBtn"
+        android:layout_width="0dp"
+        android:layout_height="120dp"
+        android:layout_columnWeight="1"
+        android:backgroundTint="@android:color/holo_green_dark"/>
+
+    <Button
+        android:text="Yellow"
+        android:id="@+id/yellowBtn"
+        android:layout_height="120dp"
+        android:layout_width="0dp"
+        android:layout_columnWeight="1"
+        android:backgroundTint="@android:color/holo_orange_light"/>
+
+    </GridLayout>
+
+</LinearLayout>
