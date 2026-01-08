@@ -30,7 +30,7 @@ public class FindColorActivity extends AppCompatActivity {
         Button b3 = findViewById(R.id.btn3);
         Button b4 = findViewById(R.id.btn4);
 
-        Button[] buttons = {b1, b2, b3};
+        Button[] buttons = {b1, b2, b3, b4};
 
         Random random = new Random();
         correctIndex = random.nextInt(4);

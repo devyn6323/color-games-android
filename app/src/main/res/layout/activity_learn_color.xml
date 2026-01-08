@@ -26,12 +26,12 @@
 
     <Button
         android:text="Red"
-        android:
         android:id="@+id/redBtn"
         android:layout_width="0dp"
         android:layout_height="120dp"
         android:layout_columnWeight="1"
-        android:backgroundTint="@android:color/holo_red_dark"/>
+        android:background="@drawable/rect_button"
+        android:textColor="@android:color/white"/>
 
     <Button
         android:text="Blue"
@@ -39,7 +39,8 @@
         android:layout_height="120dp"
         android:layout_width="0dp"
         android:layout_columnWeight="1"
-        android:backgroundTint="@android:color/holo_blue_dark"/>
+        android:background="@drawable/rect_button"
+        android:textColor="@android:color/white"/>
 
     <Button
         android:text="Green"
@@ -47,7 +48,8 @@
         android:layout_width="0dp"
         android:layout_height="120dp"
         android:layout_columnWeight="1"
-        android:backgroundTint="@android:color/holo_green_dark"/>
+        android:background="@drawable/rect_button"
+        android:textColor="@android:color/white"/>
 
     <Button
         android:text="Yellow"
@@ -55,7 +57,8 @@
         android:layout_height="120dp"
         android:layout_width="0dp"
         android:layout_columnWeight="1"
-        android:backgroundTint="@android:color/holo_orange_light"/>
+        android:background="@drawable/rect_button"
+        android:textColor="@android:color/white"/>
 
     </GridLayout>
 
