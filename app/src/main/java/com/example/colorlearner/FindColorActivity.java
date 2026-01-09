@@ -1,5 +1,7 @@
 package com.example.colorlearner;
 
+import static android.view.View.VISIBLE;
+
 import android.os.Bundle;
 import android.graphics.Color;
 import android.widget.Button;
@@ -24,6 +26,7 @@ public class FindColorActivity extends AppCompatActivity {
 
         LinearLayout layout = findViewById(R.id.rootLayout);
         TextView question = findViewById(R.id.questionText);
+        TextView ans = findViewById(R.id.correctText);
 
         Button b1 = findViewById(R.id.btn1);
         Button b2 = findViewById(R.id.btn2);
@@ -44,8 +47,12 @@ public class FindColorActivity extends AppCompatActivity {
             buttons[i].setOnClickListener(v -> {
                 if (index == correctIndex) {
                     layout.setBackgroundColor(Color.GREEN);
+                    ans.setText("You are correct!");
+                    ans.setVisibility(VISIBLE);
                 } else {
                     layout.setBackgroundColor(Color.RED);
+                    ans.setText("Try again!");
+                    ans.setVisibility(VISIBLE);
                 }
             });
         }

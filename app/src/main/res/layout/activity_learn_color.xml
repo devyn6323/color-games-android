@@ -11,6 +11,7 @@
         android:id="@+id/colorText"
         android:text="Tap a color"
         android:textSize="28sp"
+        android:layout_marginLeft="100dp"
         android:textStyle="bold"
         android:layout_marginBottom="24dp"
         android:layout_width="wrap_content"
