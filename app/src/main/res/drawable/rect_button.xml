@@ -5,9 +5,11 @@
 
     <solid android:color="@android:color/darker_gray"/>
 
-    <corners android:radius="0dp"/>
+    <corners android:radius="32dp"/>
+
+    <padding android:left="8dp" android:top="8dp" android:bottom="8dp" android:right="8dp"/>
 
     <stroke
         android:width="2dp"
-        android:color="@android:color/black"/>
+        android:color="#888888"/>
 </shape>

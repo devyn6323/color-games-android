@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">ColorLearner</string>
+    <string name="color_red">Red</string>
+    <string name="color_blue">Blue</string>
+    <string name="color_green">Green</string>
+    <string name="color_yellow">Yellow</string>
+    <string name="tap_a_color">Tap a color</string>
 </resources>

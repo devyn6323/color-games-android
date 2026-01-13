@@ -1,15 +1,15 @@
 package com.example.colorlearner;
 
-import android.graphics.drawable.ColorDrawable;
-import android.graphics.drawable.GradientDrawable;
+
+import android.content.res.ColorStateList;
+
 import android.os.Bundle;
 
 import android.graphics.Color;
-import android.os.Bundle;
 import android.widget.Button;
 import android.widget.GridLayout;
 import android.widget.TextView;
-import android.widget.LinearLayout;
+
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -25,7 +25,6 @@ public class LearnColorActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_learn_color);
 
-        LinearLayout rootLayout = findViewById(R.id.rootLayout);
         TextView colorText = findViewById(R.id.colorText);
         GridLayout colorGrid = findViewById(R.id.colorGrid);
 
@@ -39,21 +38,22 @@ public class LearnColorActivity extends AppCompatActivity {
             if (colorGrid.getChildAt(i) instanceof Button) {
                 Button btn = (Button) colorGrid.getChildAt(i);
 
-                GradientDrawable drawable = (GradientDrawable) btn.getBackground();
+
                 Integer color = colorMap.get(btn.getText().toString());
-                if (color != null) drawable.setColor(color);
+                if (color != null ) {
+                    final int colorValue = color;
+                    btn.setBackgroundTintList(ColorStateList.valueOf(colorValue));
+                    btn.setTextColor(Color.BLACK);
 
-                btn.setOnClickListener(v -> {
-                    GradientDrawable bg = (GradientDrawable) btn.getBackground();
-                    int clickedColor = bg.getColor().getDefaultColor();
-
-
-                    //sets the background color
-                    rootLayout.setBackgroundColor(clickedColor);
 
                     //sets the text to indicate the background color
-                    colorText.setText(btn.getText());
-                });
+                    btn.setOnClickListener(v -> {
+                        v.animate().scaleX(.95f).scaleY(.95f).setDuration(100)
+                                        .withEndAction(() -> v.animate().scaleX(1f).scaleY(1f).setDuration(100).start());
+                        colorText.setText(btn.getText());
+                        colorText.setTextColor(colorValue);
+                    });
+                }
             }
         }
     }

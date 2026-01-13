@@ -5,13 +5,16 @@
     android:layout_height="match_parent"
     android:layout_gravity="center"
     android:orientation="vertical"
-    android:padding="24dp">
+    android:padding="48dp"
+    android:background="@drawable/background_gradient">
+
+
     
     <TextView
         android:id="@+id/colorText"
-        android:text="Tap a color"
-        android:textSize="28sp"
-        android:layout_marginLeft="100dp"
+        android:text="@string/tap_a_color"
+        android:textSize="36sp"
+        android:layout_gravity="center_horizontal"
         android:textStyle="bold"
         android:layout_marginBottom="24dp"
         android:layout_width="wrap_content"
@@ -21,43 +24,52 @@
         android:id="@+id/colorGrid"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_weight="1"
         android:columnCount="2"
         android:rowCount="2"
-        android:useDefaultMargins="true">
+        android:layout_gravity="center_horizontal">
 
     <Button
-        android:text="Red"
+        android:text="@string/color_red"
         android:id="@+id/redBtn"
         android:layout_width="0dp"
-        android:layout_height="120dp"
+        android:layout_height="0dp"
         android:layout_columnWeight="1"
+        android:layout_rowWeight="1"
+        android:layout_margin="8dp"
         android:background="@drawable/rect_button"
         android:textColor="@android:color/white"/>
 
     <Button
-        android:text="Blue"
+        android:text="@string/color_blue"
         android:id="@+id/blueBtn"
-        android:layout_height="120dp"
+        android:layout_height="0dp"
         android:layout_width="0dp"
         android:layout_columnWeight="1"
+        android:layout_rowWeight="1"
+        android:layout_margin="8dp"
         android:background="@drawable/rect_button"
         android:textColor="@android:color/white"/>
 
     <Button
-        android:text="Green"
+        android:text="@string/color_green"
         android:id="@+id/greenBtn"
         android:layout_width="0dp"
-        android:layout_height="120dp"
+        android:layout_height="0dp"
         android:layout_columnWeight="1"
+        android:layout_rowWeight="1"
+        android:layout_margin="8dp"
         android:background="@drawable/rect_button"
         android:textColor="@android:color/white"/>
 
     <Button
-        android:text="Yellow"
+        android:text="@string/color_yellow"
         android:id="@+id/yellowBtn"
-        android:layout_height="120dp"
+        android:layout_height="0dp"
         android:layout_width="0dp"
         android:layout_columnWeight="1"
+        android:layout_rowWeight="1"
+        android:layout_margin="8dp"
         android:background="@drawable/rect_button"
         android:textColor="@android:color/white"/>
 
