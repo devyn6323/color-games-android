@@ -4,5 +4,9 @@
     <string name="color_blue">Blue</string>
     <string name="color_green">Green</string>
     <string name="color_yellow">Yellow</string>
+    <string name="back_button">Back</string>
     <string name="tap_a_color">Tap a color</string>
+    <string name="compose_shortcut_short_label1">Main Menu</string>
+    <string name="compose_shortcut_long_label1">Open Main Menu</string>
+    <string name="compose_disabled_message1">Shortcut Unavailable</string>
 </resources>

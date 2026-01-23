@@ -27,6 +27,7 @@ public class LearnColorActivity extends AppCompatActivity {
 
         TextView colorText = findViewById(R.id.colorText);
         GridLayout colorGrid = findViewById(R.id.colorGrid);
+        Button backBtn = findViewById(R.id.backBtn);
 
         colorMap.put("Red", Color.RED);
         colorMap.put("Blue", Color.BLUE);
@@ -54,6 +55,12 @@ public class LearnColorActivity extends AppCompatActivity {
                         colorText.setTextColor(colorValue);
                     });
                 }
+
+                backBtn.setOnClickListener(v -> {
+                    v.animate().scaleX(.95f).scaleY(.95f).setDuration(100)
+                                    .withEndAction(() -> v.animate().scaleX(1f).scaleY(1f).setDuration(100).start());
+                    finish();
+                });
             }
         }
     }
